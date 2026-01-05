@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="A neural radiance field-based framework for crop counting.">
+  <meta name="keywords" content="computer vision, neural radiance fields, agriculture">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CropNeRF: A Neural Radiance Field-Based Framework for Crop Counting</title>
+  
+  <!-- Google tag (gtag.js) 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y97SLB8Q67"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Y97SLB8Q67');
+  </script>
+  -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.ico">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">CropNeRF: A Neural Radiance Field-Based Framework for Crop Counting</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"> Md Ahmed Al Muzaddid and <a href="https://ranger.uta.edu/~wjbeksi">William J. Beksi</a></span>
+          </div>
+          <div class="is-size-5 publication-university">
+            <span class="author-block">The University of Texas at Arlington</span>
+          </div>
+          <div class="is-size-5 publication-lab">
+            <span class="author-block">
+              <a href="https://rvl.uta.edu">Robotic Vision Laboratory</a></span>
+          </div>
+          <div class="column is-centered">
+            <div class="publication-links">
+              <!-- Paper link -->
+              <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Preprint link -->
+              <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Preprint</span>
+                </a>
+              </span>
+              <!-- Source code link -->
+              <span class="link-block">
+                <a href="https://github.com/robotic-vision-lab/https://github.com/robotic-vision-lab/CropNeRF-A-Neural-Radiance-Field-Based-Framework" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Source Code</span>
+                </a>
+              </span>
+              <!-- Dataset link -->
+              <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-database"></i>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop" id="Demonstration">
+      <div class="item video_1">
+        <video id="raw" autoplay controls muted loop playsinline width="1024" height="768">
+          <source src="./static/videos/video_1.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop" id="Abstract">
+    <div class="columns is-centered">
+      <!-- Abstract -->
+      <div class="column is-full-width">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Rigorous crop counting is crucial for <em>effective</em>
+            agricultural management and <em>informed</em> intervention
+            strategies. However, in outdoor field environments, partial
+            occlusions combined with inherent ambiguity in distinguishing
+            clustered crops from individual viewpoints poses an immense
+            challenge for image-based segmentation methods. To address these
+            problems, we introduce a novel crop counting framework designed for
+            exact enumeration via 3D instance segmentation. Our approach
+            utilizes 2D images captured from multiple viewpoints and associates
+            independent instance masks for neural radiance field (NeRF) view
+            synthesis. We develop crop visibility and mask consistency scores,
+            which are incorporated alongside 3D information from a NeRF model.
+            This results in an effective segmentation of crop instances in 3D
+            and highly-accurate crop counts. Furthermore, our framework,
+            <strong>CropNeRF</strong>, eliminates the dependence on
+            crop-specific parameter tuning. We validate our system on three
+            agricultural datasets consisting of cotton bolls, apples, and
+            pears, and demonstrate consistent counting performance despite
+            major variations in crop color, shape, and size. A comparative
+            analysis against the state of the art highlights superior
+            performance on crop counting tasks. Lastly, we contribute
+            <strong>3DCotton</strong>, a cotton plant dataset to advance
+            further research on this topic.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="container is-max-desktop content" id="Citation">
+    <!-- Citation -->
+    <h2 class="title is-3">Citation</h2>
+    <p>
+      If you find this project useful, then please consider citing both our
+      paper and dataset.
+    </p>
+    <pre><code>@article{muzaddid2026cropnerf,
+  title={CropNeRF: A neural radiance field-based framework for crop counting},
+  author={Al Muzaddid, Md Ahmed and Beksi, William J},
+  journal={arXiv preprint arXiv:xxxx.xxxxx},
+  year={2026}
+}</code></pre>
+    <pre><code>@data{mavmatrix/dataset.xxx,
+  title={{3DCotton}},
+  author={Al Muzaddid, Md Ahmed and Beksi, William J},
+  publisher={MavMatrix},
+  version={V1},
+  url={https://doi.org/xxx/dataset.xxx},
+  doi={xxx/dataset.xxx},
+  year={2026}
+}</code></pre>
+  </div>
+  <br>
+
+  <div class="container is-max-desktop" id="License">
+    <div class="columns is-centered">
+      <!-- License-->
+      <div class="column is-full-width">
+        <h2 class="title is-3">License</h2>
+        <div class="content has-text-justified">
+          <p>
+            The source code associated with this project is licensed under the
+            <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+            The <strong>Cotton3D</strong> dataset is available for non-commercial use under the
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License ("CC BY-NC-SA 4.0")</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a 
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+            This means you are free to borrow the 
+            <a href="https://github.com/robotic-vision-lab/croptrack">source code</a>
+            of this website, we just ask that you link back to this page in the
+            footer. Please remember to remove the analytics code included in
+            the header of this website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
